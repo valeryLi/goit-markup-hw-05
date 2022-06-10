@@ -58,7 +58,7 @@
 <section class="hero">
     <div class="container">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <button class="modal-btn" type="button">Заказать услугу</button>
+            <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
     </div>
 </section>
         <!-- FEATURES -->
@@ -112,13 +112,22 @@
     <h2 class="title">Чем мы занимаемся</h2>
     <ul class="about-list">
             <li class="about-list-item">
-                <img class="about-list-img" src="./images/about/about-img-1.jpg" alt="Разработчик пишет код" width="370" height="290">
+                <div class="about-list-img-wrapper">
+                    <img class="about-list-img" src="./images/about/about-img-1.jpg" alt="Разработчик пишет код" width="370" height="290">
+                    <h2 class="about-list-img-title">Десктопные приложения</h2>
+                </div>
             </li>
             <li class="about-list-item">
-                <img class="about-list-img" src="./images/about/about-img-2.jpg" alt="Разработчик работает над мобильным приложением" width="370" height="290">
+                <div class="about-list-img-wrapper">
+                    <img class="about-list-img" src="./images/about/about-img-2.jpg" alt="Разработчик работает над мобильным приложением" width="370" height="290">
+                    <h2 class="about-list-img-title">Мобильные приложения</h2>
+                </div>
             </li>
             <li class="about-list-item">
-            <img class="about-list-img" src="./images/about/about-img-3.jpg" alt="Дизайнер подбирает цвета" width="370" height="290">
+                <div class="about-list-img-wrapper">
+                    <img class="about-list-img" src="./images/about/about-img-3.jpg" alt="Дизайнер подбирает цвета" width="370" height="290">
+                    <h2 class="about-list-img-title">Дизайнерские решения</h2>
+                </div>
             </li>
     </ul>
     </div>
@@ -387,5 +396,15 @@
         </div>
 </div>
 </footer>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+            <svg class="modal-close-btn-icon" width="18px" height="18px">
+            <use href="./images/sprite.svg#icon-close-btn"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
